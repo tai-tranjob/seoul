@@ -1,0 +1,60 @@
+/* BREADCRUMD */
+.breadcrumb_section .breadcrumb {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item.active {
+    color: #960605;
+}
+
+/* UPDATING */
+.updating{
+    margin-bottom: 2em;
+}
+.updating__content {
+    height: 568px;
+    background-color: rgba(204, 204, 204,0.2);
+    border-radius: 10px;
+    display: flex;
+}
+
+.updating__content i {
+    font-size: 100px;
+    display: inline-block;
+    text-align: center;
+    width: 100% ;
+    color: #c40505;
+}
+
+.updating__content div {
+    display: block;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+.updating__content div h3{
+    text-align: center;
+    margin: 1em 0 .5em;
+}
+.updating__content div h4{
+    text-align: center;
+}
+.updating__content div button{
+    background-color: #c40505;
+    padding: 12px;
+    margin: 20px 0 0;
+}
+.updating__content div button:hover{
+    background-color: #960605;
+}
+.updating__content div button a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,74 @@
+/* BREADCRUMD */
+/* .breadcrumb_section {
+    padding-top: 100px;
+
+} */
+
+.breadcrumb_section .breadcrumb {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item.active {
+    color: #960605;
+}
+/* THANKS */
+.thanks{
+    text-align: center;
+    height: 333px;
+    display: flex;
+    align-items: center;
+}
+.thanks h2{
+    font-size: 50px;
+    color: #67bd45;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.thanks p:last-of-type{
+    font-size: 1rem;
+    color: gray;
+    font-weight: 400;    
+
+}
+.thanks p{
+    margin-bottom: 1rem;
+}
+.thanks p:last-of-type a{
+    color: #333;
+    text-decoration: none;
+}
+.thanks p:last-of-type a:hover{
+    color: #c40505;
+    text-decoration: underline;
+}
+.thanks .lead{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.thanks__btn button{
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    color: #fff;
+    background-color: #c40505;
+    border-color: transparent;
+    margin-right: 20px;
+    margin-left: -15px;
+}
+.thanks__btn button a{
+    color: #fff;
+    text-decoration: none;
+}
+.thanks__btn button:hover{
+    background-color: #960605;
+}

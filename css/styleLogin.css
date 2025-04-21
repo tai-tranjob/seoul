@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@300&display=swap');
+
+:root {
+    --succes-color: #2691d9;
+    --erro-color: #e74c3c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(330deg, #c40505, #e6b217);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.container--Login {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px 40px;
+    margin: auto;
+}
+
+.login .seoul__logo {
+    text-align: center;
+    scale: .5;
+}
+
+.login .container--Login h1 {
+    text-align: center;
+    font-weight: 500;
+    /* font-family: 'Open Sans'; */
+}
+
+.login .form-control {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    /* nếu không có dòng này độ dày các span ko bằng nhau*/
+    padding: 0;
+    border: 0;
+}
+
+.login .form-control input {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+}
+
+.login .form-control span {
+    position: absolute;
+    border-bottom: 3px solid var(--succes-color);
+    width: 0%;
+    top: 38px;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.login .form-control input:focus~span {
+    width: 100%;
+}
+
+.login .form-control {
+    color: var(--erro-color);
+}
+
+.button-submit {
+
+    width: 100%;
+    height: 50px;
+    background: var(--succes-color);
+    border: none;
+    outline: none;
+    font-family: 'Open Sans';
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    /*font chữ in đậm*/
+    margin: 0 0 25px 0;
+    cursor: pointer;
+    /*đổi biểu tượng trỏ chuột khi lia tới */
+    transition: 0.3s;
+}
+
+.button-submit:hover {
+    background-color: #08609a;
+    /* text-decoration: underline; */
+}
+
+.signup-link {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Quicksand';
+}
+
+.signup-link a {
+    color: var(--succes-color);
+    text-decoration: none;
+    /*set mặc định để  khi hover*/
+    cursor: pointer;
+    padding: 8px;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    /*khi hover tới thì inderline*/
+}
+
+.form-control small {
+    font-family: "Quicksand";
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modalSuccess {
+    /* lớp phủ mờ */
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal_inner {
+    width: 500px;
+    height: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    animation: modalShow 0.5s linear;
+}
+
+.modal_header {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #28a745;
+}
+
+.modal_header .icon_success {
+    font-size: 95px;
+    color: white;
+}
+
+.modal_body h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+    color: #000000;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.modal_body p {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(58, 56, 56);
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+.modal_footer {
+    width: auto;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_success {
+    color: #fff;
+    background: #e6b217;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_success a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Quicksand";
+    font-size: 20px;
+    padding: 0;
+
+    font-weight: bold;
+
+}
+
+.btn_success:hover {
+    background-color: #11be45;
+    /* text-decoration: underline; */
+}
+
+.modalSuccess.active {
+    display: block;
+}
+
+/*----------------------------------------------------------------------------------------*/
+.modalfail {
+    /* lớp phủ mờ */
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal_innerfail {
+    width: 500px;
+    height: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    animation: modalShow 0.5s linear;
+}
+
+.modal_headerfail {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #b32209;
+}
+
+.modal_headerfail .iconfail {
+    font-size: 95px;
+    color: white;
+}
+
+.modal_bodyfail h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+    color: #000000;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.modal_bodyfail p {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(58, 56, 56);
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+.modal_footerfail {
+    width: auto;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnfail {
+    color: #fff;
+    background: #e6b217;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnfail a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Quicksand";
+    font-size: 20px;
+    padding: 0;
+
+    font-weight: bold;
+}
+
+.btnfail:hover {
+    background-color: #11be45;
+    /* text-decoration: underline; */
+}
+
+.modalfail.activefail {
+    display: block;
+}
+
+/*--------------------------------------------------------------------------------*/
+.modalNoExist {
+    /* lớp phủ mờ */
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal_innerNoExist {
+    width: 500px;
+    height: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    animation: modalShow 0.5s linear;
+}
+
+.modal_headerNoExist {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #d8872a;
+}
+
+.modal_headerNoExist .iconNoExist {
+    width: 95px;
+    height: 95px;
+    background-image: url(exclamation.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.modal_bodyNoExist h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+    color: #000000;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.modal_bodyNoExist p {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(58, 56, 56);
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+.modal_footerNoExist {
+    width: auto;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnNoExist {
+    color: #fff;
+    background: #e6b217;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnNoExist a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Quicksand";
+    font-size: 20px;
+    padding: 0;
+
+    font-weight: bold;
+}
+
+.btnNoExist:hover {
+    background-color: #11be45;
+    /* text-decoration: underline; */
+}
+
+.modalNoExist.activeNoExist {
+    display: block;
+}
+
+@keyframes modalShow {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.Forgotpassword {
+    width: 320px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /*đổi biểu tượng trỏ chuột khi lia tới */
+    transition: 0.3s;
+    justify-content: space-between;
+}
+
+.Forgotpassword a {
+    font-family: 'Open Sans';
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px
+}
+
+.Forgotpassword a:hover {
+    color: #08609a;
+    font-weight: bolder;
+}
+
+.Forgotpassword label {
+    font-family: 'Open Sans';
+    text-decoration: none;
+    font-size: 14px
+}
+
+.Forgotpassword .RemenberPassword input:hover {
+    cursor: pointer;
+    /*đổi biểu tượng trỏ chuột khi lia tới */
+    font-weight: bolder;
+}
+
+.Forgotpassword .RemenberPassword label:hover {
+    cursor: pointer;
+    /*đổi biểu tượng trỏ chuột khi lia tới */
+    font-weight: bold;
+}

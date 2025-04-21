@@ -1,0 +1,177 @@
+/* GLOBAL  */
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* BREADCRUMD */
+/* .breadcrumb_section {
+    padding-top: 100px;
+
+} */
+
+.breadcrumb_section .breadcrumb {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+}
+
+.breadcrumb_section .breadcrumb .breadcrumb-item.active {
+    color: #960605; 
+}
+
+/* PAYMENT  */
+.payment__content__left label ,.payment__content__right label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.payment__content__left label i {
+    margin-right: 5px;
+}
+
+.payment__content__left input[type=text],.payment__content__left input[type=tel] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.payment__content__left label[for=payment--defaul] {
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+}
+
+.payment__content__left label[for=payment--defaul] i {
+    cursor: help;
+}
+
+.payment__content__left label[for=payment--defaul] i:hover {
+    color: #c40505;
+}
+
+.payment__content__left label[for=payment--defaul] .more-info {
+    display: none;
+    border: 1px solid #c40505;
+    width: 280px;
+    border-radius: 3px;
+    padding: 12px;
+    position: absolute;
+    left: 245px;
+    bottom: -20px;
+    color: black;
+}
+
+.payment__content__left label[for=payment--defaul] i:hover .more-info {
+    display: block;
+    transition: linear 2s;
+}
+
+.payment__content__left textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.payment__content__left .payment--button {
+    display: block;
+    padding: 8px 28px;
+    line-height: normal;
+    border: 1px solid #c40505;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #c40505;
+    color: #fff;
+    border-radius: 4px;
+    width: 100%;
+}
+.payment__content__left .payment--button a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.payment__content__left .payment--button:hover {
+    background-color: #960605;
+    transition: all .2s;
+}
+.payment__content__left .modal-content .modal-header{
+    text-align: center;
+    display: block;
+    border: none;
+
+}
+.payment__content__left .modal-content h1{
+    /* font-weight: 700; */
+    color: #960605;
+    font-size: 24px !important;
+}
+.payment__content__left .modal-content .modal-body span{
+    color: #960605;
+    font-weight: 700;
+}
+.payment__content__left .modal-content  .modal-body{
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+.payment__content__left .modal-content .modal-footer{
+    justify-content: center;
+    border: none;
+}
+.payment__content__left .modal-content .modal-footer .btn-left{
+    background-color: #ccc;
+    color: #fff;
+}
+.payment__content__left .modal-content .modal-footer .btn-right{
+    background-color: #c40505;
+    color: #fff;
+}
+.payment__content__right{
+    position: relative;
+}
+#payment__method{
+    position: unset;
+}
+#payment__method .btn{
+    border: none;
+}
+#payment__method label:not(.active)+.payment__method--visa,#payment__method label:not(.active)+.payment__method--master,#payment__method label:not(.active)+.payment__method--money,#payment__method label:not(.active)+.payment__method--bank {
+    display: none;
+}
+#payment__method .payment__method{
+    width: 100%;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    padding: 0 12px;
+}
+#payment__method .payment__method p{
+    background-color: #EEEEEE;
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+#payment__method .payment__method p span{
+    color: #c40505;
+    font-weight: bold;
+}
