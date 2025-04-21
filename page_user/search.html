@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm</title>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="../css/fontawesome-free/css/all.min.css">
+    <!-- FONT GOOGLE  -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/search.css">
+
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <div class="header__content container-xl ">
+            <div class="header__logo">
+                <div class="logo">
+                    <a href="./user-index.html"><img src="../img/img_index/Tenthuonghieu 182x58 .png" alt="logo"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu menu-1" id="mainNav">
+                    <li class=""><a href="./user-index.html">TRANG CHỦ</a></li>
+                    <li><a href="./Menu/all-menu.html">THỰC ĐƠN</a></li>
+                    <li><a href="./intro.html">GIỚI THIỆU</a></li>
+                    <li><a href="./contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+            <div class="header__tool d-flex align-items-center ">
+                <form class="input-group" action="./search.html" method="post">
+                    <input type="text" class="form-control" placeholder="Tìm món ăn..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="submit" id="button-addon2" class="header__search--button "><i
+                            class="fas fa-search"></i></button>
+                </form>
+
+                <div class="header__flag " data-bs-toggle="modal" data-bs-target="#notifyModal">
+                    <div class="flag-item1 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-vn.png" alt="flag_VN">
+                        </a>
+                    </div>
+                    <div class="flag-item2 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-en.png" alt="flag_EN">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="header__icon">
+                    <div class="icon">
+                        <div class="account">
+                            <img src="../img/img_index/avatar.jpg" alt="">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="./user-file.html"><i class="fas fa-user"></i>Hồ
+                                        sơ</a></li>
+                                <li class="list-group-item"><a href="./user-file.html"><i
+                                            class="fas fa-utensils"></i>Đơn hàng</a></li>
+                                <li class="list-group-item"><a href="./user-help.html"><i
+                                            class="fas fa-question-circle"></i>Hỗ trợ</a>
+                                </li>
+                                <li class="list-group-item"><a href="../index.html"><i
+                                            class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <a href="./user-cart.html">
+                            <i class="fa fa-shopping-basket basket">
+                                <span class="notify-cart">2</span>
+                            </i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="notifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Thông báo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Chức năng đang cập nhật!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB-->
+    <section class="breadcrumb_section container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./user-cart.html">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tìm kiếm</li>
+
+            </ol>
+        </nav>
+    </section>
+    <!-- SEARCH  -->
+    <section class="seoul__search container">
+        <h1>Tìm kiếm</h1>
+        <p class="mb-3">Có 3 kết quả phù hợp cho <strong>"tok"</strong></p>
+        <div class="product__filter mb-3 row">
+            <div class="filter--range col-6 ">
+                <p>Khoảng giá:</p>
+                <form action="" class="d-inline-block">
+                    <input type="text" maxlength="13" placeholder="Từ ₫">
+                    <div class="line"></div>
+                    <input type="text" maxlength="13" placeholder="Đến ₫">
+                </form>
+            </div>
+            <div class="filter--sort col-6 text-end">
+                <p>Sắp xếp theo:</p>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Mặc định</option>
+                    <option value="1">Bán chạy</option>
+                    <option value="2">Giá tăng dần</option>
+                    <option value="3">Giá giảm dần</option>
+                    <option value="4">Từ A-Z</option>
+                    <option value="5">Từ Z-A</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row product_content" id="product">
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="./Product/dav_TBKhaisan-product.html"><img
+                                src="../img/AnVat/Tokbokki/TBHS.jpg" class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">tokbokki hải sản</h5>
+                        <p class="card-text">55,000₫</p>
+                        <a href="#" class="btn add" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="./Product/dav_TBKtruyenthong-product.html"><img
+                                src="../img/AnVat/Tokbokki/Seoul 201421.jpg" class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Tokbokki truyền thống</h5>
+                        <p class="card-text">99,000₫</p>
+                        <a href="#" class="btn add" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="./Product/dav_TBKphomai-product.html"><img
+                                src="../img/AnVat/Tokbokki/TBLPM.jpg" class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Tokbokki phô mai</h5>
+                        <p class="card-text">25,000₫</p>
+                        <a href="#" class="btn add" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal check-user-->
+        <!-- <div class="modal fade" id="Modalcheck-user" tabindex="-1" aria-labelledby="check-user" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title " id="check-user">Bạn chưa đăng nhập!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Bạn cần đăng nhập hoặc đăng ký tài khoản để mua hàng và thanh toán!
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger"><a href="../../pages/Login.html">Đăng
+                                nhập</a></button>
+                        <button type="button" class="btn btn-warning "><a href="../../pages/SignUp.html">Đăng
+                                ký</a></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Load more -->
+        <!-- <div class="col-12 text-center">
+                <a href="#" id="loadMore">Xem thêm</a>
+            </div> -->
+        <!-- ADDCART -->
+        <div class="toast-container position-fixed bottom-0  p-3  toast--add">
+            <div id="add--cart" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                    Sản phẩm đã được thêm vào giỏ hàng
+
+                </div>
+            </div>
+        </div>
+        <!-- PAGINATION  -->
+        <nav aria-label="Page navigation " class="product__pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+                <li class="page-item disabled">
+                    <a class="page-link" href="" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- FOOTER  -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer__conect">
+                <p class="time">Thời gian hoạt động: <span> 09h00 - 22h00 mỗi ngày</span></p>
+                <div class="footer__item">
+                    <p>Kết nối Mỳ Cay Seoul:</p>
+                    <a href="https://www.facebook.com/hethongmicayseoul/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="https://www.instagram.com/heomixx1305/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                </div>
+
+            </div>
+            <div class="footer__content">
+                <div class="footer__shipper-main">
+                    <div class="footer__shipper">
+                        <div class="shipper">
+                            <img src="../img/img_index/logo_spicy.png" alt="giao_hang">
+                        </div>
+                        <div class="footer__hotline">
+                            <p>
+                                <i class="fas fa-phone-alt"></i> <span>Hotline đặt hàng</span>
+                            </p>
+                            <p>19003360</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__blog">
+                    <a href="#">
+                        <p>Blog</p>
+                    </a>
+                    <a href="#">
+                        <p>Tuyển dụng</p>
+                    </a>
+                    <a href="#">
+                        <p>Hệ thống nhà hàng</p>
+                    </a>
+                </div>
+                <div class="footer__buy">
+                    <a href="#">
+                        <p>Chính sách giao hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Theo dõi đơn hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Điều khoản và điều kiện</p>
+                    </a>
+                </div>
+                <div class="footer__subscribe">
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <p>Đăng ký nhận tin</p>
+                    </a>
+                    <a href="#">
+                        <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi</p>
+                    </a>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="Email của bạn">
+                        <br>
+                        <button type="submit" class="đk">ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>&copy; <span>2022 Công ty TNHH Mỳ Cay Seoul | Design by My Group</span> </p>
+        </div>
+    </section>
+    <!-- Back to top  -->
+    <a href="#" class="BackToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- JQUERY  -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- BOOSTRAP JS  -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- UTIL JS  -->
+    <script src="../js/util.js"></script>
+    <!-- BACKTOTOP JS  -->
+    <script src="../js/main-backToTop.js"></script>
+    <!-- PAYMENT JS  -->
+    <Script>
+        // kiếm thẻ có id là mainNav 
+        //kiếm thẻ ul
+        var paymentMethod = document.getElementById("payment__method");
+        // kiếm thẻ con li 
+        var listMethod = paymentMethod.getElementsByTagName("label");
+        for (var i = 0; i < listMethod.length; i++) {
+            // khi thẻ li đc click thì gọi hàm nó ra
+            listMethod[i].addEventListener("click", function () {
+                //tìm thẻ nào đang đc gắn acitve
+                var current = document.querySelector("#payment__method .active");
+                // xóa class active của thẻ đang được gắn
+                current.className = current.className.replace("active", "");
+                // thêm class active vào thẻ li được click 
+                this.className += "active";
+
+            });
+        }
+    </Script>
+    <!-- ADDCART  -->
+    <script>
+        // ADDCART
+        var listAdd = document.getElementsByClassName('add')
+        const toastLiveExample = document.getElementById('add--cart')
+        for (var i = 0; i < listAdd.length; i++) {
+            listAdd[i].addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+            });
+        }
+    </script>
+</body>
+
+</html>

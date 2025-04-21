@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ</title>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="../css/fontawesome-free/css/all.min.css">
+    <!-- FONT GOOGLE  -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/user-file.css">
+
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <div class="header__content container-xl ">
+            <div class="header__logo">
+                <div class="logo">
+                    <a href="./user-index.html"><img src="../img/img_index/Tenthuonghieu 182x58 .png" alt="logo"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu menu-1" id="mainNav">
+                    <li class=""><a href="./user-index.html">TRANG CHỦ</a></li>
+                    <li><a href="./Menu/all-menu.html">THỰC ĐƠN</a></li>
+                    <li><a href="./intro.html">GIỚI THIỆU</a></li>
+                    <li><a href="./contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+            <div class="header__tool d-flex align-items-center ">
+                <form class="input-group" action="./search.html" method="post">
+                    <input type="text" class="form-control" placeholder="Tìm món ăn..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="submit" id="button-addon2" class="header__search--button "><i
+                            class="fas fa-search"></i></button>
+                </form>
+
+                <div class="header__flag " data-bs-toggle="modal" data-bs-target="#notifyModal">
+                    <div class="flag-item1 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-vn.png" alt="flag_VN">
+                        </a>
+                    </div>
+                    <div class="flag-item2 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-en.png" alt="flag_EN">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="header__icon">
+                    <div class="icon">
+                        <div class="account">
+                            <img src="../img/img_index/avatar.jpg" alt="">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="./user-file.html"><i class="fas fa-user"></i>Hồ
+                                        sơ</a></li>
+                                <li class="list-group-item"><a href="./user-file.html"><i
+                                            class="fas fa-utensils"></i>Đơn hàng</a></li>
+                                <li class="list-group-item"><a href="./user-help.html"><i
+                                            class="fas fa-question-circle"></i>Hỗ trợ</a>
+                                </li>
+                                <li class="list-group-item"><a href="../index.html"><i
+                                            class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <a href="./user-cart.html">
+                            <i class="fa fa-shopping-basket basket">
+                                <span class="notify-cart">2</span>
+                            </i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="notifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Thông báo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Chức năng đang cập nhật!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb_section container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Hồ sơ</li>
+
+            </ol>
+        </nav>
+    </section>
+    <!-- FILE USER  -->
+    <section class="file container">
+        <h1>Hồ sơ</h1>
+        <div class="row file__content">
+            <div class="file__left col-3">
+                <div class="img__file d-flex align-items-center">
+                    <img src="../img/img_index/avatar.jpg" alt="avatar">
+                    <p>TeamOngBapCay</p>
+                </div>
+                <ul class="list__tool" id="list__tool">
+                    <li class="active" onclick="file()"><i class="fas fa-user"></i>Hồ sơ</li>
+                    <li class="" onclick="order()"><i class="fas fa-utensils"></i>Đơn hàng</li>
+                    <li class="" onclick="help()"><i class="fas fa-question-circle"></i>Hỗ trợ</li>
+                </ul>
+            </div>
+            <div class="file__right col-9" id="file__right">
+                <div class="tool hoso row justify-content-end" id="file">
+                    <div class="hoso--label col-2">
+                        <p>Tên tài khoản</p>
+                        <p>Họ và tên</p>
+                        <p>Email</p>
+                        <p>Số điện thoại</p>
+                        <p>Địa chỉ</p>
+                        <p>Giới tính</p>
+                        <p>Ngày sinh</p>
+                    </div>
+                    <div class="hoso-info col-6 ">
+                        <p>TeamOngBapCay<i class="far fa-edit " data-bs-toggle="modal"
+                                data-bs-target="#notifyModal"></i></p>
+                        <p>Lê Ánh Nam<i class="far fa-edit " data-bs-toggle="modal"
+                                data-bs-target="#notifyModal"></i></p>
+                        <p>teamongbapcay@gmail.com<i class="far fa-edit" data-bs-toggle="modal"
+                                data-bs-target="#notifyModal"></i></p>
+                        <p>********96<i class="far fa-edit" data-bs-toggle="modal" data-bs-target="#notifyModal"></i>
+                        </p>
+                        <p>273, An Dương Vương, Quận 5, TP HCM<i class="far fa-edit" data-bs-toggle="modal"
+                                data-bs-target="#notifyModal"></i></p>
+                        <p>Nam<i class="far fa-edit" data-bs-toggle="modal" data-bs-target="#notifyModal"></i></p>
+                        <p>26/12/2003<i class="far fa-edit" data-bs-toggle="modal" data-bs-target="#notifyModal"></i>
+                        </p>
+                    </div>
+                    <div class="hoso--img col-4">
+                        <img src="../img/img_index/avatar.jpg" alt="">
+                        <button data-bs-toggle="modal" data-bs-target="#notifyModal">Thay đổi</button>
+                    </div>
+                    <button>Lưu</button>
+
+                </div>
+                <div class="tool donhang" id="order">
+                    <select class="form-select donhang-select" aria-label="Default select example">
+                        <option selected>Trạng thái</option>
+                        <option value="1">Đã hoàn thành</option>
+                        <option value="2">Đang vận chuyển</option>
+                        <option value="3">Đã huỷ</option>
+                        <option value="4">Đang xử lý</option>
+                        <option value="5">Chưa xử lý</option>
+
+                    </select>
+                    <table class="table">
+                        <thead class="table">
+                            <tr>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Chi tiết</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">DH044</th>
+                                <td>Mì lẩu thái bò </td>
+                                <td>34,000₫</td>
+                                <td>
+                                    <div class=" tr tr__xl">Đang xử lý</div>
+                                </td>
+                                <td><i class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#detail-order_1"></i>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">DH034</th>
+                                <td>Mì kim chi bò mỹ, Tôm thêm</td>
+                                <td>56,000₫</td>
+                                <td>
+                                    <div class=" tr tr__dag">Đang vận chuyển</div>
+                                </td>
+                                <td><i class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#detail-order_2"></i>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">DH022</th>
+                                <td>Lẩu kim chi bạch tuộc</td>
+                                <td>239,000₫</td>
+                                <td>
+                                    <div class=" tr tr__dh">Đã huỷ</div>
+                                </td>
+                                <td><i class="fas fa-eye " data-bs-toggle="modal" data-bs-target="#detail-order_3"></i>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">DH017</th>
+                                <td>Lẩu thái hải sản</td>
+                                <td>210,000₫</td>
+                                <td>
+                                    <div class=" tr tr__dg">Đã hoàn thành</div>
+                                </td>
+                                <td><i class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#detail-order_4"></i>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <!-- Modal chi tiết đơn hàng-->
+                    <div class="modal fade" id="detail-order_1" tabindex="-1" aria-labelledby="detail-orderModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5 fw-normal" id="detail-orderModalLabel">Đơn hàng:
+                                        <strong>DH044</strong>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="row">
+                                        <table class="table ">
+                                            <thead class="table ">
+                                                <tr>
+                                                    <th scope="col">Ngày đặt</th>
+                                                    <th scope="col">Sản phẩm</th>
+                                                    <th scope="col">Đơn giá</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Tổng tiền</th>
+                                                    <th scope="col">Trạng thái</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="fw-normal">
+                                                        <p>17:46</p>
+                                                        <p>9/12/2022</p>
+                                                    </th>
+                                                    <td>
+                                                        <p>Mì lẩu thái bò</p>
+                                                    </td>
+                                                    <td>34,000₫</td>
+                                                    <td>
+                                                        <p>1</p>
+                                                    </td>
+                                                    <td>34,000₫</td>
+                                                    <td>
+                                                        <div class=" tr tr__xl">Đang xử lý</div>
+                                                    </td>
+
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <p class="fs-5">Thành tiền: <span class="fw-bold text-danger">34,000₫</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="detail-order_2" tabindex="-1" aria-labelledby="detail-orderModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5 fw-normal" id="detail-orderModalLabel">Đơn hàng:
+                                        <strong>DH034</strong>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="row">
+                                        <table class="table ">
+                                            <thead class="table ">
+                                                <tr>
+                                                    <th scope="col">Ngày đặt</th>
+                                                    <th scope="col">Sản phẩm</th>
+                                                    <th scope="col">Đơn giá</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Tổng tiền</th>
+                                                    <th scope="col">Trạng thái</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="fw-normal">
+                                                        <p>08:46</p>
+                                                        <p>6/12/2022</p>
+                                                    </th>
+                                                    <td>
+                                                        <p>Mì kim chi bò mỹ </p>
+                                                        <p>Tôm thêm</p>
+
+                                                    </td>
+                                                    <td>
+                                                        <p>49,000₫</p>
+                                                        <p>7,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>1</p>
+                                                        <p>1</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>49,000₫</p>
+                                                        <p>7,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class=" tr tr__dag">Đang vận chuyển</div>
+                                                    </td>
+
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <p class="fs-5">Thành tiền: <span class="fw-bold text-danger">56,000₫</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="detail-order_3" tabindex="-1" aria-labelledby="detail-orderModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5 fw-normal" id="detail-orderModalLabel">Đơn hàng:
+                                        <strong>DH022</strong>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="row">
+                                        <table class="table ">
+                                            <thead class="table ">
+                                                <tr>
+                                                    <th scope="col">Ngày đặt</th>
+                                                    <th scope="col">Sản phẩm</th>
+                                                    <th scope="col">Đơn giá</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Tổng tiền</th>
+                                                    <th scope="col">Trạng thái</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="fw-normal">
+                                                        <p>12:46</p>
+                                                        <p>03/12/2022</p>
+                                                    </th>
+                                                    <td>
+                                                        <p>Lẩu kim cho bạch tuộc</p>
+
+                                                    </td>
+                                                    <td>
+                                                        <p>239,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>1</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>239,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class=" tr tr__dh">Đã huỷ</div>
+                                                    </td>
+
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <p class="fs-5">Thành tiền: <span class="fw-bold text-danger">239,000₫</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="detail-order_4" tabindex="-1" aria-labelledby="detail-orderModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5 fw-normal" id="detail-orderModalLabel">Đơn hàng:
+                                        <strong>DH017</strong>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="row">
+                                        <table class="table ">
+                                            <thead class="table ">
+                                                <tr>
+                                                    <th scope="col">Ngày đặt</th>
+                                                    <th scope="col">Sản phẩm</th>
+                                                    <th scope="col">Đơn giá</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Tổng tiền</th>
+                                                    <th scope="col">Trạng thái</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="fw-normal">
+                                                        <p>10:06</p>
+                                                        <p>03/12/2022</p>
+                                                    </th>
+                                                    <td>
+                                                        <p>Lẩu thái hải sản</p>
+
+                                                    </td>
+                                                    <td>
+                                                        <p>210,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>1</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>210,000₫</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class=" tr tr__dg">Đã hoàn thành</div>
+                                                    </td>
+
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <p class="fs-5">Thành tiền: <span class="fw-bold text-danger">210,000₫</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END Modal chi tiết đơn hàng-->
+
+                </div>
+                <div class="tool hotro fs-6" id="help">Chức năng hiện tại chưa khả dụng!</div>
+            </div>
+        </div>
+
+    </section>
+    <!-- FOOTER  -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer__conect">
+                <p class="time">Thời gian hoạt động: <span> 09h00 - 22h00 mỗi ngày</span></p>
+                <div class="footer__item">
+                    <p>Kết nối Mỳ Cay Seoul:</p>
+                    <a href="https://www.facebook.com/hethongmicayseoul/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="https://www.instagram.com/heomixx1305/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                </div>
+
+            </div>
+            <div class="footer__content">
+                <div class="footer__shipper-main">
+                    <div class="footer__shipper">
+                        <div class="shipper">
+                            <img src="../img/img_index/logo_spicy.png" alt="giao_hang">
+                        </div>
+                        <div class="footer__hotline">
+                            <p>
+                                <i class="fas fa-phone-alt"></i> <span>Hotline đặt hàng</span>
+                            </p>
+                            <p>19003360</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__blog">
+                    <a href="#">
+                        <p>Blog</p>
+                    </a>
+                    <a href="#">
+                        <p>Tuyển dụng</p>
+                    </a>
+                    <a href="#">
+                        <p>Hệ thống nhà hàng</p>
+                    </a>
+                </div>
+                <div class="footer__buy">
+                    <a href="#">
+                        <p>Chính sách giao hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Theo dõi đơn hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Điều khoản và điều kiện</p>
+                    </a>
+                </div>
+                <div class="footer__subscribe">
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <p>Đăng ký nhận tin</p>
+                    </a>
+                    <a href="#">
+                        <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi</p>
+                    </a>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="Email của bạn">
+                        <br>
+                        <button type="submit" class="đk">ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>&copy; <span>2022 Công ty TNHH Mỳ Cay Seoul | Design by My Group</span> </p>
+        </div>
+    </section>
+    <!-- Back to top  -->
+    <a href="#" class="BackToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- JQUERY  -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- BOOSTRAP JS  -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- UTIL JS  -->
+    <script src="../js/util.js"></script>
+    <!-- BACKTOTOP JS  -->
+    <script src="../js/main-backToTop.js"></script>
+    <!-- FILE  -->
+    <script>
+        var tool = document.getElementById("list__tool");
+        var list__tool = tool.getElementsByTagName("li");
+        for (var i = 0; i < list__tool.length; i++) {
+            list__tool[i].addEventListener("click", function () {
+                //tìm thẻ nào đang đc gắn acitve
+                var current = document.querySelector("#list__tool .active");
+                // xóa class active của thẻ đang được gắn
+                current.className = current.className.replace("active", "");
+                // thêm class active vào thẻ li được click 
+                this.className += "active";
+
+
+
+            });
+        }
+        var content = document.getElementById("file__right");
+        var list_content = content.getElementsByClassName("tool");
+
+        for (var i = 1; i < list_content.length; i++) {
+            list_content[i].style.display = "none";
+        }
+        function file() {
+            for (var i = 1; i < list_content.length; i++) {
+                list_content[i].style.display = "none";
+            }
+            var x = document.getElementById("file");
+            x.style.display = "flex";
+        }
+        function order() {
+            for (var i = 0; i < list_content.length; i++) {
+                list_content[i].style.display = "none";
+            }
+            var x = document.getElementById("order");
+            x.style.display = "block";
+        }
+        function help() {
+            for (var i = 0; i < list_content.length; i++) {
+                list_content[i].style.display = "none";
+            }
+            var x = document.getElementById("help");
+            x.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
