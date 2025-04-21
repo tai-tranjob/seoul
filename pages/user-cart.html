@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="../css/fontawesome-free/css/all.min.css">
+    <!-- FONT GOOGLE  -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL  -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <div class="header__content container-xl ">
+            <div class="header__logo">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/img_index/Tenthuonghieu 182x58 .png" alt="logo"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu menu-1" id="mainNav">
+                    <li><a href="../index.html">TRANG CHỦ</a></li>
+                    <li><a href="../pages/Menu/all-menu.html">THỰC ĐƠN</a></li>
+                    <li><a href="../pages/intro.html">GIỚI THIỆU</a></li>
+                    <li class="active"><a href="./contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+            <div class="header__tool d-flex align-items-center ">
+                <form class="input-group" action="./search.html" method="post">
+                    <input type="text" class="form-control" placeholder="Tìm món ăn..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="submit" id="button-addon2" class="header__search--button "><i
+                            class="fas fa-search"></i></button>
+                </form>
+
+                <div class="header__flag " data-bs-toggle="modal" data-bs-target="#notifyModal">
+                    <div class="flag-item1 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-vn.png" alt="flag_VN">
+                        </a>
+                    </div>
+                    <div class="flag-item2 ">
+                        <a href="#">
+                            <img src="../img/img_index/flag-en.png" alt="flag_EN">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="header__icon">
+                    <div class="icon">
+                        <a href="../pages/Login.html">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a href="../pages/cart.html">
+                            <i class="fa fa-shopping-basket basket">
+                                <span class="notify-cart">0</span>
+                            </i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="notifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Thông báo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Chức năng đang cập nhật!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb_section container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+
+            </ol>
+        </nav>
+    </section>
+    <!-- CART  -->
+    <section class="Seoul__cart container">
+        <div class="row Seoul__cart__content">
+            <div class="col-9 Seoul__cart--orders">
+                <h2>Giỏ hàng</h2>
+                <div class="orders--items row">
+                    <div class="orders--items-left col-2">
+                        <div class="items--thumb">
+                            <img src="../img/AnVat/KB.jpg" alt="KIMBAP">
+                            <div class="product_qty">
+                                <form id='myform' method='POST' class='quantity row m-0' action='#'>
+                                    <button type="button" class="qtyminus minus" field='quantity'><i
+                                            class="fas fa-minus"></i></button>
+                                    <input name="quantity" type='text' id="qty" value="1" class="text-center qty">
+                                    <button type="button" class="qtyplus plus" field='quantity'><i
+                                            class="fas fa-plus"></i></button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orders--items-right col-10">
+                        <div class="items--name"><a href="">Kimbap </a></div>
+                        <div class="items--price">Đơn giá: <span>45,000đ</span></div>
+                        <div class="items--total">Tổng: <span>45,000đ</span></div>
+                        <button class="items--remove ">Xoá</button>
+
+                    </div>
+
+
+                </div>
+                <div class="orders--items row">
+                    <div class="orders--items-left col-2">
+                        <div class="items--thumb">
+                            <img src="../img/Mi/MKCB.jpg" alt="KIMBAP">
+                            <div class="product_qty">
+                                <form id='myform' method='POST' class='quantity row m-0' action='#'>
+                                    <button type="button" class="qtyminus minus" field='quantity'><i
+                                            class="fas fa-minus"></i></button>
+                                    <input name="quantity" type='text' id="qty" value="1" class="text-center qty">
+                                    <button type="button" class="qtyplus plus" field='quantity'><i
+                                            class="fas fa-plus"></i></button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orders--items-right col-10">
+                        <div class="items--name"><a href="">Mì kim chi bò </a></div>
+                        <div class="items--price">Đơn giá: <span>34,000đ</span></div>
+                        <div class="items--total">Tổng: <span>34,000đ</span></div>
+                        <button class="items--remove ">Xoá</button>
+
+                    </div>
+
+
+                </div>
+                <div class="hr"></div>
+                <div class="orders__submit row">
+                    <div class="col-6"><i class="fas fa-angle-left"></i></i>
+                        <a href="">Tiếp tục chọn món </a>
+                    </div>
+                    <div class="orders__submit--total col-6">
+                        <p class="temp--money">Tạm tính: <span>79,000đ</span></p>
+                        <p class="into--money">Thành tiền: <span>79,000đ</span></p>
+                        <button class="total--pay">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 Seoul__cart--contact">
+                <div class="user--sevice">
+                    <h3>Dịch vụ khách hàng</h3>
+                    <p>Bạn cần sự hỗ trợ từ chúng tôi? Hãy liên hệ ngay</p>
+                    <a href="tel:19003360" title="Hotline: 19003360"><i class="fas fa-phone-alt"></i>1900  3360</a>
+                    <a href=""><i class="fab fa-facebook-f "></i>Chúng tôi trên Facebook</a>
+                    <p>Giờ hoạt động: (04:00 - 23:00)</p>
+                    <a href="">Liên hệ</a>
+                </div>
+                <div class="user--payment">
+                    <h3>Đặt món cùng Mỳ Cay Seoul</h3>
+                    <p><i class="fas fa-check"></i></i><span>Giảm giá lên tới 50%</span> - Tại tất cả cửa hàng cho hội viên mới</p>
+                    <p><i class="fas fa-check"></i></i><span>Mỳ cay seoul</span> - Thổi bùng vị cay Hàn Quốc</p>
+                    <p><i class="fas fa-check"></i></i><span>Miễn phí vận chuyển</span> - cho đơn hàng từ 300.000đ</p>
+                    <ul>
+                        <li><img src="https://bizweb.dktcdn.net/100/421/124/themes/811860/assets/cart_payment_1.svg?1617678628801" alt="Hình thức thanh toán"></li>
+                        <li><img src="	https://bizweb.dktcdn.net/100/421/124/themes/811860/assets/cart_payment_2.svg?1617678628801" alt="Hình thức thanh toán"></li>
+                        <li><img src="https://bizweb.dktcdn.net/100/421/124/themes/811860/assets/cart_payment_3.svg?1617678628801" alt="Hình thức thanh toán"></li>
+                        <li><img src="https://bizweb.dktcdn.net/100/421/124/themes/811860/assets/cart_payment_4.svg?1617678628801" alt="Hình thức thanh toán"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER  -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer__conect">
+                <p class="time">Thời gian hoạt động: <span> 09h00 - 22h00 mỗi ngày</span></p>
+                <div class="footer__item">
+                    <p>Kết nối Mỳ Cay Seoul:</p>
+                    <a href="https://www.facebook.com/hethongmicayseoul/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="https://www.instagram.com/heomixx1305/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                </div>
+
+            </div>
+            <div class="footer__content">
+                <div class="footer__shipper-main">
+                    <div class="footer__shipper">
+                        <div class="shipper">
+                            <img src="../img/img_index/logo_spicy.png" alt="giao_hang">
+                        </div>
+                        <div class="footer__hotline">
+                            <p>
+                                <i class="fas fa-phone-alt"></i> <span>Hotline đặt hàng</span>
+                            </p>
+                            <p>19003360</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__blog">
+                    <a href="#">
+                        <p>Blog</p>
+                    </a>
+                    <a href="#">
+                        <p>Tuyển dụng</p>
+                    </a>
+                    <a href="#">
+                        <p>Hệ thống nhà hàng</p>
+                    </a>
+                </div>
+                <div class="footer__buy">
+                    <a href="#">
+                        <p>Chính sách giao hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Theo dõi đơn hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Điều khoản và điều kiện</p>
+                    </a>
+                </div>
+                <div class="footer__subscribe">
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <p>Đăng ký nhận tin</p>
+                    </a>
+                    <a href="#">
+                        <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi</p>
+                    </a>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="Email của bạn">
+                        <br>
+                        <button type="submit" class="đk">ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>&copy; <span>2022 Công ty TNHH Mỳ Cay Seoul | Design by My Group</span> </p>
+        </div>
+    </section>
+    <!-- Back to top  -->
+    <a href="#" class="BackToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- JQUERY  -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- BOOSTRAP JS  -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- UTIL JS  -->
+    <script src="../js/util.js"></script>
+    <!-- BACKTOTOP JS  -->
+    <script src="../js/main-backToTop.js"></script>
+    <!-- HEADER JS  -->
+    <Script>
+        // kiếm thẻ có id là mainNav 
+        //kiếm thẻ ul
+        var mainNav = document.getElementById("mainNav");
+        // kiếm thẻ con li 
+        var listNav = mainNav.getElementsByTagName("li");
+        for (var i = 0; i < listNav.length; i++) {
+            // khi thẻ li đc click thì gọi hàm nó ra
+            listNav[i].addEventListener("click", function () {
+                //tìm thẻ nào đang đc gắn acitve
+                var current = document.querySelector("#mainNav .active");
+                // xóa class active của thẻ đang được gắn
+                current.className = current.className.replace("active", "");
+                // thêm class active vào thẻ li được click 
+                this.className += "active";
+            });
+
+        }
+    </Script>
+    <!-- QUANTITY JS  -->
+    <!-- <script>
+        var input = document.querySelector('#qty');
+        var btnminus = document.querySelector('.qtyminus');
+        var btnplus = document.querySelector('.qtyplus');
+
+        if (input !== undefined && btnminus !== undefined && btnplus !== undefined && input !== null && btnminus !== null && btnplus !== null) {
+
+            var min = Number(input.getAttribute('min'));
+            var max = Number(input.getAttribute('max'));
+            var step = Number(input.getAttribute('step'));
+
+            function qtyminus(e) {
+                var current = Number(input.value);
+                var newval = (current - step);
+                if (newval < min) {
+                    newval = min;
+                } else if (newval > max) {
+                    newval = max;
+                }
+                input.value = Number(newval);
+                e.preventDefault();
+            }
+
+            function qtyplus(e) {
+                var current = Number(input.value);
+                var newval = (current + step);
+                if (newval > max) newval = max;
+                input.value = Number(newval);
+                e.preventDefault();
+            }
+
+            btnminus.addEventListener('click', qtyminus);
+            btnplus.addEventListener('click', qtyplus);
+
+        } // End if test
+    </script> -->
+    <script>
+        jQuery(document).ready(($) => {
+            $('.quantity').on('click', '.plus', function (e) {
+                let $input = $(this).prev('input.qty');
+                let val = parseInt($input.val());
+                $input.val(val + 1).change();
+            });
+
+            $('.quantity').on('click', '.minus',
+                function (e) {
+                    let $input = $(this).next('input.qty');
+                    var val = parseInt($input.val());
+                    if (val > 1) {
+                        $input.val(val - 1).change();
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

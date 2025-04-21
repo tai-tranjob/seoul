@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn</title>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="../../css/fontawesome-free/css/all.min.css">
+    <!-- FONT GOOGLE  -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/product.css">
+
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <div class="header__content container-xl ">
+            <div class="header__logo">
+                <div class="logo">
+                    <a href="../../index.html"><img src="../../img/img_index/Tenthuonghieu 182x58 .png" alt="logo"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu menu-1" id="mainNav">
+                    <li><a href="../../index.html">TRANG CHỦ</a></li>
+                    <li class="active"><a href="../../pages/Menu/all-menu.html">THỰC ĐƠN</a></li>
+                    <li><a href="../../pages/intro.html">GIỚI THIỆU</a></li>
+                    <li><a href="../../pages/contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+            <div class="header__tool d-flex align-items-center ">
+                <form class="input-group" action="../search.html" method="post">
+                    <input type="text" class="form-control" placeholder="Tìm món ăn..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="submit" id="button-addon2" class="header__search--button "><i
+                            class="fas fa-search"></i></button>
+                </form>
+
+                <div class="header__flag " data-bs-toggle="modal" data-bs-target="#notifyModal">
+                    <div class="flag-item1 ">
+                        <a href="#">
+                            <img src="../../img/img_index/flag-vn.png" alt="flag_VN">
+                        </a>
+                    </div>
+                    <div class="flag-item2 ">
+                        <a href="#">
+                            <img src="../../img/img_index/flag-en.png" alt="flag_EN">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="header__icon">
+                    <div class="icon">
+                        <a href="../../pages/Login.html">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a href="../../pages/cart.html">
+                            <i class="fa fa-shopping-basket basket">
+                                <span class="notify-cart">0</span>
+                            </i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="notifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Thông báo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Chức năng đang cập nhật!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb_section container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="./all-menu.html">Thực đơn</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tất cả sản phẩm</li>
+            </ol>
+        </nav>
+    </section>
+    <!-- PRODUCT -->
+    <section class="product container">
+        <h1>Tất cả sản phẩm</h1>
+        <div class="row cate-slider mb-4">
+            <div class="col-6"><a href="#" title="Khuyến mãi khổng lồ"> <img
+                        src="../../img/Banner(Design)/Banner_19.jpg" alt=""></a>
+            </div>
+            <div class="col-6"><a href="#" title="Khuyến mãi khổng lồ"> <img
+                        src="../../img/Banner(Design)/Banner_21.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="product_tags mb-4">
+            <a class="btn btn-outline-secondary active" role="button" href="#" type="Tất cả">Tất cả</a>
+            <a class="btn btn-outline-secondary" role="button" href="./mkc-menu.html" type="Mì kim chi">Mì kim chi</a>
+            <a class="btn btn-outline-secondary" role="button" href="./mlt-menu.html" type="Mì lẩu thái">Mì lẩu thái</a>
+            <a class="btn btn-outline-secondary" role="button" href="./lkc-menu.html" type="Lẩu kim chi">Lẩu kim chi</a>
+            <a class="btn btn-outline-secondary" role="button" href="./lt-menu.html" type="Lẩu thái">Lẩu thái</a>
+            <a class="btn btn-outline-secondary" role="button" href="./mtr-menu.html" type="Món trộn">Món trộn</a>
+            <a class="btn btn-outline-secondary" role="button" href="./du-menu.html" type="Đồ uống">Đồ uống</a>
+            <a class="btn btn-outline-secondary" role="button" href="./dav-menu.html" type="Đồ ăn vặt">Đồ ăn vặt</a>
+            <a class="btn btn-outline-secondary" role="button" href="./mth-menu.html" type="Món thêm">Món thêm</a>
+        </div>
+        <div class="product__filter mb-2 text-end">
+            <div class="filter--sort ">
+                <p>Sắp xếp theo:</p>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Mặc định</option>
+                    <option value="1">Bán chạy</option>
+                    <option value="2">Giá tăng dần</option>
+                    <option value="3">Giá giảm dần</option>
+                    <option value="4">Từ A-Z</option>
+                    <option value="5">Từ Z-A</option>
+                  </select>
+            </div>
+
+        </div>
+        <div class="row product_content" id="product">
+           
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/dav_kimbap-product.html"><img src="../../img/AnVat/KB.jpg"
+                                class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Kimbap</h5>
+                        <p class="card-text">45,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/dav_hcc-product.html"><img src="../../img/AnVat/Hcc.jpg"
+                                class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Há cảo chiên</h5>
+                        <p class="card-text">35,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/du_tratraicay-product.html"><img src="../../img/Nuoc/Seoul-drink03242-1.jpg"
+                                class="card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Trà trái cây</h5>
+                        <p class="card-text">30,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/dav_TBKtruyenthong-product.html"><img src="../../img/AnVat/Tokbokki/Seoul 201421.jpg" class="card-img-top"
+                                alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Tokbokki truyền thống</h5>
+                        <p class="card-text">99,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/dav_bcc-product.html"><img src="../../img/AnVat/BTTHS.jpg" class="card-img-top"
+                                alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Bánh cuộn chiên</h5>
+                        <p class="card-text">35,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product_content_items">
+                <div class="card">
+                    <div class="product_content__img"><a href="../Product/dav_TBKphomai-product.html"><img src="../../img/AnVat/Tokbokki/TBLPM.jpg" class="card-img-top"
+                                alt="..."></a>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">Tokbokki phô mai</h5>
+                        <p class="card-text">25,000₫</p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modalcheck-user">Đặt món</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal check-user-->
+        <div class="modal fade" id="Modalcheck-user" tabindex="-1" aria-labelledby="check-user" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title " id="check-user">Bạn chưa đăng nhập!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Bạn cần đăng nhập hoặc đăng ký tài khoản để mua hàng và thanh toán!
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger"><a href="../../pages/Login.html">Đăng
+                                nhập</a></button>
+                        <button type="button" class="btn btn-warning "><a href="../../pages/SignUp.html">Đăng
+                                ký</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Load more -->
+        <!-- <div class="col-12 text-center">
+                <a href="#" id="loadMore">Xem thêm</a>
+            </div> -->
+
+        <!-- PAGINATION  -->
+        <nav aria-label="Page navigation " class="product__pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="./all-menu.html">1</a></li>
+                <li class="page-item active"><a class="page-link " href="#product">2</a></li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="./all-menu_2.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!-- FOOTER  -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer__conect">
+                <p class="time">Thời gian hoạt động: <span> 09h00 - 22h00 mỗi ngày</span></p>
+                <div class="footer__item">
+                    <p>Kết nối Mỳ Cay Seoul:</p>
+                    <a href="https://www.facebook.com/hethongmicayseoul/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="https://www.instagram.com/heomixx1305/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                </div>
+
+            </div>
+            <div class="footer__content">
+                <div class="footer__shipper-main">
+                    <div class="footer__shipper">
+                        <div class="shipper">
+                            <img src="../../img/img_index/logo_spicy.png" alt="giao_hang">
+                        </div>
+                        <div class="footer__hotline">
+                            <p>
+                                <i class="fas fa-phone-alt"></i> <span>Hotline đặt hàng</span>
+                            </p>
+                            <p>19003360</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__blog">
+                    <a href="#">
+                        <p>Blog</p>
+                    </a>
+                    <a href="#">
+                        <p>Tuyển dụng</p>
+                    </a>
+                    <a href="#">
+                        <p>Hệ thống nhà hàng</p>
+                    </a>
+                </div>
+                <div class="footer__buy">
+                    <a href="#">
+                        <p>Chính sách giao hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Theo dõi đơn hàng</p>
+                    </a>
+                    <a href="#">
+                        <p>Điều khoản và điều kiện</p>
+                    </a>
+                </div>
+                <div class="footer__subscribe">
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <p>Đăng ký nhận tin</p>
+                    </a>
+                    <a href="#">
+                        <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi</p>
+                    </a>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="Email của bạn">
+                        <br>
+                        <button type="submit" class="đk">ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>&copy; <span>2022 Công ty TNHH Mỳ Cay Seoul | Design by My Group</span> </p>
+        </div>
+    </section>
+    <!-- Back to top  -->
+    <a href="#" class="BackToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- JQUERY  -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- BOOSTRAP JS  -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <!-- UTIL JS  -->
+    <script src="../../js/util.js"></script>
+    <!-- BACKTOTOP JS  -->
+    <script src="../../js/main-backToTop.js"></script>
+    <!-- LOAD MORE JS  -->
+    <!-- <script>
+        $(document).ready(function () {
+            $(".product_content_items").slice(0, 12).show();
+            $("#loadMore").on("click", function (e) {
+                e.preventDefault();
+                $(".product_content_items:hidden").slice(0, 12).slideDown();
+                if ($(".product_content_items:hidden").length == 0) {
+                    document.getElementById("loadMore").style.display = 'none';
+                }
+            });
+
+        })
+    </script> -->
+</body>
+
+</html>
